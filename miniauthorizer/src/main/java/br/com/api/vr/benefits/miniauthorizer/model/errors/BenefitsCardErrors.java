@@ -10,4 +10,5 @@ public class BenefitsCardErrors {
 
     public static final BenefitsCardErrorModel BENEFITS_CARD_NOT_FOUND = new BenefitsCardErrorModel(HttpStatus.NOT_FOUND.value(), "404", "No cards found.");
 
+    public static final BenefitsCardErrorModel BENEFITS_CARD_INVALID_NUMBER_CARD = new BenefitsCardErrorModel(HttpStatus.NOT_FOUND.value(), "404", "");
 }

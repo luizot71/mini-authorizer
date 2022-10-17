@@ -3,7 +3,6 @@ package br.com.api.vr.benefits.miniauthorizer.exception.handler;
 import br.com.api.vr.benefits.miniauthorizer.model.errors.BenefitsCardErrorModel;
 import lombok.Getter;
 import lombok.Setter;
-
 import static lombok.AccessLevel.PROTECTED;
 
 @Getter
