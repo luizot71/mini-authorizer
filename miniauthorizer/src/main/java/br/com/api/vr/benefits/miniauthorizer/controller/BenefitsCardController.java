@@ -1,5 +1,6 @@
 package br.com.api.vr.benefits.miniauthorizer.controller;
 
+import br.com.api.vr.benefits.miniauthorizer.entity.BenefitsCardEntity;
 import br.com.api.vr.benefits.miniauthorizer.exception.handler.ApplicationException;
 import br.com.api.vr.benefits.miniauthorizer.model.BenefitsCardCreateModel;
 import br.com.api.vr.benefits.miniauthorizer.model.BenefitsCardModel;
@@ -50,6 +51,31 @@ public class BenefitsCardController {
 
         } catch (IllegalStateException e) {
             LOGGER.info(e.getMessage(), "ERR_SOME_PROBLEM_OCCURRED", "There was a problem while running.");
+            throw new ApplicationException();
+        }
+    }
+
+    @ApiOperation("Updates benefit card data in the database.")
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "Ok"),
+            @ApiResponse(code = 422, message = "Invalid data"),
+            @ApiResponse(code = 500, message = "Server error")
+    })
+    @PutMapping("/{cardId}")
+    public ResponseEntity<Void> updateBenefitsCard(@PathVariable( "cardId" ) Long cardId,	@Valid @RequestBody BenefitsCardEntity benefitsCardEntity,
+                                                           @RequestHeader("Authorization") String token) throws ApplicationException {
+        try {
+
+                service.updateCard(cardId, benefitsCardEntity, token);
+
+                return ResponseEntity.ok().build();
+
+        } catch (NullPointerException e) {
+            LOGGER.info(e.getMessage(), "ERR_NULL_DATA", "A propriedade invocada esta nula.");
+            throw new ApplicationException();
+
+        } catch (IllegalStateException e) {
+            LOGGER.info(e.getMessage(), "ERR_SOME_PROBLEM_OCCURRED", "Ocorreu algum problema durante a execução.");
             throw new ApplicationException();
         }
     }

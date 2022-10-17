@@ -10,29 +10,29 @@ import static lombok.AccessLevel.PROTECTED;
 @Setter(PROTECTED)
 public class ApplicationException extends Exception {
 
-    private String codigo;
-    private String detalhe;
+    private String code;
+    private String detail;
 
     public ApplicationException() {
         super();
     }
 
     @Getter
-    private BenefitsCardErrorModel model;
+    private BenefitsCardErrorModel benefitsCardErrorModel;
 
-    public ApplicationException(final String titulo, final String codigo, final String detalhe) {
-        super(titulo);
-        this.codigo = codigo;
-        this.detalhe = detalhe;
+    public ApplicationException(final String title, final String code, final String detail) {
+        super(title);
+        this.code = code;
+        this.detail = detail;
     }
 
-    public ApplicationException(BenefitsCardErrorModel model, Throwable cause) {
-        super(model.getMessage(), cause);
-        this.model = model;
+    public ApplicationException(BenefitsCardErrorModel benefitsCardErrorModel, Throwable cause) {
+        super(benefitsCardErrorModel.getMessage(), cause);
+        this.benefitsCardErrorModel = benefitsCardErrorModel;
     }
 
-    public ApplicationException(BenefitsCardErrorModel model) {
-        this(model, null);
+    public ApplicationException(BenefitsCardErrorModel benefitsCardErrorModel) {
+        this(benefitsCardErrorModel, null);
     }
 
     public String getTitulo() {
@@ -42,8 +42,8 @@ public class ApplicationException extends Exception {
     @Override
     public String toString() {
         return "ApplicationException{" +
-                "codigo='" + codigo + '\'' +
-                ", detalhe='" + detalhe + '\'' +
+                "code='" + code + '\'' +
+                ", detail='" + detail + '\'' +
                 '}';
     }
 }

@@ -11,4 +11,5 @@ public interface BenefitsCardRepository extends CrudRepository<BenefitsCardEntit
 
     Optional<BenefitsCardEntity> findBenefitsCardByNumber(String cardNumber );
 
+    BenefitsCardEntity save(BenefitsCardEntity benefitsCardEntity, String token);
 }
