@@ -13,9 +13,9 @@ public enum BenefitsCardStatus {
 
     private String value;
 
-    public static BenefitsCardStatus getValues( String value ) {
+    public static BenefitsCardStatus getValues(String value) {
         return Arrays.stream( values() )
-                .filter( v -> v.getValue().equalsIgnoreCase( value ) )
+                .filter( v -> v.getValue().equalsIgnoreCase(value))
                 .findFirst()
                 .orElse( null );
     }

@@ -35,7 +35,7 @@ public class BenefitsCardService {
 
         BenefitsCardEntity benefitsCardEntity = mapper.map(benefitsCardCreateModel, BenefitsCardEntity.class);
 
-        while ( isBenefitsCardExists(benefitsCardEntity) ) {
+        while (isBenefitsCardExists(benefitsCardEntity, token)) {
             throw new ApplicationException(BENEFITS_CARD_EXISTS);
         }
 
@@ -131,7 +131,7 @@ public class BenefitsCardService {
         return benefitsCardEntity.getBalance().getBalance();
     }
 
-    public boolean isBenefitsCardExists(BenefitsCardEntity benefitsCardEntity) {
-        return benefitsCardRepository.findBenefitsCardByNumber( benefitsCardEntity.getCardNumber() ).isPresent();
+    public boolean isBenefitsCardExists(BenefitsCardEntity benefitsCardEntity, String token) {
+        return benefitsCardRepository.findBenefitsCardByNumber( benefitsCardEntity.getCardNumber(), token).isPresent();
     }
 }

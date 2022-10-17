@@ -1,6 +1,5 @@
 package br.com.api.vr.benefits.miniauthorizer.model;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
