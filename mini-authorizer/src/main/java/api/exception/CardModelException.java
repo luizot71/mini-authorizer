@@ -17,4 +17,7 @@ public class CardModelException extends RuntimeException {
         this(model, null);
     }
 
+    public CardModelException() {
+
+    }
 }

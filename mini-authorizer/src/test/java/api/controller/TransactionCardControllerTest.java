@@ -104,9 +104,9 @@ public class TransactionCardControllerTest extends MiniAuthorizerApplicationTest
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
 
-   // @Test
-   // @DisplayName("Exclui o Transação por ID")
-    /*public void WhenDeleteTransaction() throws Exception {
+    //@Test
+    @DisplayName("Exclui o Transação por ID")
+    public void WhenDeleteTransaction() throws Exception {
         String cartao = "{\"numeroCartao\": \"9800700044409004\", \"senha\": \"9909\", \"status\": \"ATIVO\"}";
 
         this.mockMvc = MockMvcBuilders.standaloneSetup(cardController).build();
@@ -127,5 +127,5 @@ public class TransactionCardControllerTest extends MiniAuthorizerApplicationTest
 
         this.mockMvc.perform(MockMvcRequestBuilders.delete(URL_API+"/{id}", "1"))
                 .andExpect(MockMvcResultMatchers.status().isOk());
-    }*/
+    }
 }

@@ -24,11 +24,6 @@ public class CardControllerTest extends MiniAuthorizerApplicationTests {
         this.mockMvc = MockMvcBuilders.standaloneSetup(cardController).build();
     }
 
-    @AfterAll
-    public void tearDown() throws Exception {
-        this.WhenDeleteCardById();
-    }
-
     @Test
     @DisplayName("Cria o Cartão")
     public void WhenCreatedCard() throws Exception {
@@ -109,7 +104,7 @@ public class CardControllerTest extends MiniAuthorizerApplicationTests {
     @Test
     @DisplayName("Exclui o Cartão por ID")
     public void WhenDeleteCardById() throws Exception {
-        String data = "{\"numeroCartao\": \"9002099078009080\", \"senha\": \"9890\", \"status\": \"ATIVO\"}";
+        String data = "{\"numeroCartao\": \"9002099078009099\", \"senha\": \"9890\", \"status\": \"ATIVO\"}";
 
         this.mockMvc.perform(MockMvcRequestBuilders.post(URL_API)
                         .contentType(MediaType.APPLICATION_JSON)
