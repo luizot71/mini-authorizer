@@ -7,7 +7,7 @@ services:
 #    ports:
 #      - 27017:27017
 #    environment:
-#      MONGO_INITDB_DATABASE: mini-authorizer
+#      MONGO_INITDB_DATABASE: miniautorizador
 #      MONGO_INITDB_ROOT_USERNAME: user
 #      MONGO_INITDB_ROOT_PASSWORD: password
 #    volumes:
@@ -18,10 +18,10 @@ services:
     container_name: mysql
     restart: always
     ports:
-      - "3306:3306"
+      - "3309:3309"
     environment:
       MYSQL_HOST: localhost
-      MYSQL_DATABASE: mini-authorizer
+      MYSQL_DATABASE: miniautorizador
       MYSQL_ROOT_PASSWORD:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     volumes:
@@ -33,7 +33,7 @@ services:
       - "9000:9000"
   api:
     container_name: api
-    build: ../mini-authorizer/
+    build: ../miniautorizador/
     command: mvn clean spring-boot:run -Dspring-boot.run.profiles=docker
     ports:
       - "8080:8080"

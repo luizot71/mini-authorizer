@@ -1,6 +1,6 @@
 # API MINI-AUTHORIZER - Vale Refeição
 
-API  Mini-Authorizer, desenvolvido em Java 17 com Spring-Boot.
+API  MiniAutorizador, desenvolvido em Java 17 com Spring-Boot.
 
 
 ## Características
