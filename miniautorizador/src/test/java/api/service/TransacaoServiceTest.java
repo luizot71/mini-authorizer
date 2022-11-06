@@ -64,7 +64,7 @@ public class TransacaoServiceTest extends MiniAutorizadorApplicationTests {
         CartaoEntity mockCartaoEntity = CartaoEntity.builder()
                 .id(1L)
                 .numeroCartao("110110110110110")
-                .senha("aaaaaaaaaaa")
+                .senha("9980")
                 .saldo(mockSaldoEntity)
                 .status(CartaoStatus.ATIVO)
                 .build();
@@ -193,7 +193,7 @@ public class TransacaoServiceTest extends MiniAutorizadorApplicationTests {
         CartaoEntity mockCartaoEntity = CartaoEntity.builder()
                 .id(1L)
                 .numeroCartao("330330330330330")
-                .senha("cccccccccc")
+                .senha("9905")
                 .saldo(mockSaldoEntity)
                 .status(CartaoStatus.ATIVO)
                 .build();
@@ -221,7 +221,7 @@ public class TransacaoServiceTest extends MiniAutorizadorApplicationTests {
         CartaoEntity mockCartaoEntity = CartaoEntity.builder()
                 .id(1L)
                 .numeroCartao("440440440440440")
-                .senha("ddddddddddd")
+                .senha("9908")
                 .saldo(mockSaldoEntity)
                 .status(CartaoStatus.ATIVO)
                 .build();
@@ -248,7 +248,7 @@ public class TransacaoServiceTest extends MiniAutorizadorApplicationTests {
         CartaoEntity mockCartaoEntity = CartaoEntity.builder()
                 .id(1L)
                 .numeroCartao("550550550550550")
-                .senha("eeeeeeeeeeee")
+                .senha("9909")
                 .saldo(mockSaldoEntity)
                 .status(CartaoStatus.ATIVO)
                 .build();

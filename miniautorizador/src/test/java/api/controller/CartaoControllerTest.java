@@ -54,7 +54,7 @@ public class CartaoControllerTest extends MiniAutorizadorApplicationTests {
     @Test
     @DisplayName("Pega o Cartão por Número do Cartão")
     public void WhenGetCardByCardNumber() throws Exception {
-        String data = "{\"numeroCartao\": \"3030303030\", \"senha\": \"7090\", \"status\": \"ATIVO\"}";
+        String data = "{\"numeroCartao\": \"3000090004500980\", \"senha\": \"7090\", \"status\": \"ATIVO\"}";
 
         this.mockMvc.perform(MockMvcRequestBuilders.post(URL_API)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -62,14 +62,14 @@ public class CartaoControllerTest extends MiniAutorizadorApplicationTests {
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isCreated());
 
-        this.mockMvc.perform(MockMvcRequestBuilders.get(URL_API+"/{numeroCartao}", "3030303030"))
+        this.mockMvc.perform(MockMvcRequestBuilders.get(URL_API+"/{numeroCartao}", "3000090004500980"))
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
 
     @Test
     @DisplayName("Pega o Cartão por ID do Cartão")
     public void WhenGetCardById() throws Exception {
-        String data = "{\"numeroCartao\": \"4040404040\", \"senha\": \"6790\", \"status\": \"ATIVO\"}";
+        String data = "{\"numeroCartao\": \"4400090004500980\", \"senha\": \"6790\", \"status\": \"ATIVO\"}";
 
         this.mockMvc.perform(MockMvcRequestBuilders.post(URL_API)
                         .contentType(MediaType.APPLICATION_JSON)

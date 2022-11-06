@@ -35,7 +35,7 @@ public class TransacaoControllerTest extends MiniAutorizadorApplicationTests {
     @Test
     @DisplayName("Cria a Transação")
     public void WhenCreatedTransaction() throws Exception {
-        String cartao = "{\"numeroCartao\": \"11111111111\", \"senha\": \"9020\", \"status\": \"ATIVO\"}";
+        String cartao = "{\"numeroCartao\": \"3000090004500110\", \"senha\": \"9020\", \"status\": \"ATIVO\"}";
 
         this.mockMvc = MockMvcBuilders.standaloneSetup(cartaoController).build();
         this.mockMvc.perform(MockMvcRequestBuilders.post("/cartoes")
@@ -44,7 +44,7 @@ public class TransacaoControllerTest extends MiniAutorizadorApplicationTests {
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isCreated());
 
-        String transacao = "{\"numeroCartao\": \"11111111111\", \"senha\": \"9020\", \"valor\": \"10.20\"}";
+        String transacao = "{\"numeroCartao\": \"3000090004500110\", \"senha\": \"9020\", \"valor\": \"10.20\"}";
 
         this.mockMvc = MockMvcBuilders.standaloneSetup(transacaoController).build();
         this.mockMvc.perform(MockMvcRequestBuilders.post(URL_API)
@@ -57,7 +57,7 @@ public class TransacaoControllerTest extends MiniAutorizadorApplicationTests {
     @Test
     @DisplayName("Pega todas as Transações")
     public void WhenGetAllTransactions() throws Exception {
-        String cartao = "{\"numeroCartao\": \"22222222222\", \"senha\": \"8990\", \"status\": \"ATIVO\"}";
+        String cartao = "{\"numeroCartao\": \"2200090004500110\", \"senha\": \"8990\", \"status\": \"ATIVO\"}";
 
         this.mockMvc = MockMvcBuilders.standaloneSetup(cartaoController).build();
         this.mockMvc.perform(MockMvcRequestBuilders.post("/cartoes")
@@ -66,7 +66,7 @@ public class TransacaoControllerTest extends MiniAutorizadorApplicationTests {
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isCreated());
 
-        String transacao = "{\"numeroCartao\": \"22222222222\", \"senha\": \"8990\", \"valor\": \"10.20\"}";
+        String transacao = "{\"numeroCartao\": \"2200090004500110\", \"senha\": \"8990\", \"valor\": \"10.20\"}";
 
         this.mockMvc = MockMvcBuilders.standaloneSetup(transacaoController).build();
         this.mockMvc.perform(MockMvcRequestBuilders.post(URL_API)
@@ -82,7 +82,7 @@ public class TransacaoControllerTest extends MiniAutorizadorApplicationTests {
     @Test
     @DisplayName("Pega o Transação por ID do Transação")
     public void WhenGetTransactionById() throws Exception {
-        String cartao = "{\"numeroCartao\": \"333333333333\", \"senha\": \"9999\", \"status\": \"ATIVO\"}";
+        String cartao = "{\"numeroCartao\": \"3300090004500110\", \"senha\": \"9999\", \"status\": \"ATIVO\"}";
 
         this.mockMvc = MockMvcBuilders.standaloneSetup(cartaoController).build();
         this.mockMvc.perform(MockMvcRequestBuilders.post("/cartoes")
@@ -91,7 +91,7 @@ public class TransacaoControllerTest extends MiniAutorizadorApplicationTests {
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isCreated());
 
-        String transacao = "{\"numeroCartao\": \"333333333333\", \"senha\": \"9999\", \"valor\": \"10.20\"}";
+        String transacao = "{\"numeroCartao\": \"3300090004500110\", \"senha\": \"9999\", \"valor\": \"10.20\"}";
 
         this.mockMvc = MockMvcBuilders.standaloneSetup(transacaoController).build();
         this.mockMvc.perform(MockMvcRequestBuilders.post(URL_API)
@@ -106,7 +106,7 @@ public class TransacaoControllerTest extends MiniAutorizadorApplicationTests {
 
     @DisplayName("Exclui o Transação por ID")
     public void testDELETETransaction() throws Exception {
-        String cartao = "{\"numeroCartao\": \"555555555555\", \"senha\": \"66666666666\", \"status\": \"ATIVO\"}";
+        String cartao = "{\"numeroCartao\": \"5500090004500550\", \"senha\": \"5678\", \"status\": \"ATIVO\"}";
 
         this.mockMvc = MockMvcBuilders.standaloneSetup(cartaoController).build();
         this.mockMvc.perform(MockMvcRequestBuilders.post("/cartoes")
@@ -115,7 +115,7 @@ public class TransacaoControllerTest extends MiniAutorizadorApplicationTests {
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isCreated());
 
-        String transacao = "{\"numeroCartao\": \"555555555555\", \"senha\": \"66666666666\", \"valor\": \"10.20\"}";
+        String transacao = "{\"numeroCartao\": \"5500090004500550\", \"senha\": \"5678\", \"valor\": \"10.20\"}";
 
         this.mockMvc = MockMvcBuilders.standaloneSetup(transacaoController).build();
         this.mockMvc.perform(MockMvcRequestBuilders.post(URL_API)
