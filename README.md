@@ -1,4 +1,4 @@
-# API MINI-AUTHORIZER - Vale Refeição
+# API MINI-AUTORIZADOR - Teste Vale Refeição
 
 API  MiniAutorizador, desenvolvido em Java 17 com Spring-Boot.
 
@@ -42,26 +42,25 @@ Além disso, é preciso ter o Java 17 e o MySql 8 instalado.
 
 ## Docker (Opcional)
 
-Para rodar o projeto via Docker-Compose, basta executar o comando:
+Para rodar o projeto via Docker-Compose:
 
-cd docker
+Executar o comando abaixo na pasta docker:
 docker-compose up
 
 
-
-Aguarde carregar todo o serviço web. <br>
+Aguarde carregar todo o serviço web.
 Após concluído, digite um dos endereços abaixo em seu navegador.
 
-Listar cartões cadastrados: <br>
+Listar cartões cadastrados:
 http://localhost:8080/cartoes
 
-Listar transações cadastradas: <br>
+Listar transações cadastradas:
 http://localhost:8080/transacoes
 
 
 ## Swagger 
 
-Documentação da API RESTful: <br>
+Documentação da API RESTful:
 
 http://localhost:8080/swagger-ui.html
 
